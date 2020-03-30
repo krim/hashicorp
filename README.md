@@ -1,6 +1,6 @@
 # How to execute:
 
-1. Edit hosts to use your own servers:
+1. Edit [hosts](https://github.com/krim/hashicorp/blob/master/hosts) to use your own servers:
 2. Run the playbook to install `consult` + `nomad`
     ```bash
     ansible-playbook hashistack.yml
