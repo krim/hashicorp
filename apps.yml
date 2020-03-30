@@ -1,0 +1,13 @@
+- hosts: nomad_deployer
+  become: true
+  become_user: root
+  # TASKS
+  tasks:
+    - name: Deploy example app
+      block:
+        - name: Copy Nomad Job
+          template:
+            src: apps/example.nomad.j2
+            dest: /tmp/example.nomad
+        - name: Run Nomad Job
+          command: nomad job run /tmp/example.nomad

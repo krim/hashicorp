@@ -1,0 +1,17 @@
+thinker.consul ansible_host=95.216.211.196
+front.consul ansible_host=95.217.133.160
+
+[consul_instances]
+thinker.consul consul_node_role=bootstrap
+front.consul consul_node_role=client
+
+[docker_instances]
+thinker.consul nomad_node_role=both
+front.consul nomad_node_role=client
+
+[nomad_instances]
+thinker.consul nomad_node_role=both
+front.consul nomad_node_role=client
+
+[nomad_deployer]
+front.consul
