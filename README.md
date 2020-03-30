@@ -1,5 +1,10 @@
 # How to execute:
 
+Install requirements:
+```
+ansible-galaxy install -r requirements.yml
+```
+
 1. Edit [hosts](https://github.com/krim/hashicorp/blob/master/hosts) to use your own servers:
 2. Run the playbook to install `consult` + `nomad`
     ```bash
